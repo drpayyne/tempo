@@ -8,11 +8,12 @@
 import Cocoa
 
 class ViewController: NSViewController {
+    @IBOutlet var tempo: NSTextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        tempo.stringValue = "Hello!"
     }
 
     override var representedObject: Any? {

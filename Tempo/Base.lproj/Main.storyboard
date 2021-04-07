@@ -706,7 +706,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="tempo" destination="yZZ-Ld-l8B" id="oaT-Ol-67X"/>
+                        <outlet property="tempoLabel" destination="yZZ-Ld-l8B" id="oaT-Ol-67X"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

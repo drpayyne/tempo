@@ -685,24 +685,56 @@
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController storyboardIdentifier="ViewController" id="XfG-lQ-9wD" customClass="ViewController" customModule="Tempo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" misplaced="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="415" height="88"/>
+                    <view key="view" id="m2S-Jp-Qdl">
+                        <rect key="frame" x="0.0" y="0.0" width="329" height="129"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4VA-is-SPD">
+                                <rect key="frame" x="14" y="13" width="301" height="32"/>
+                                <buttonCell key="cell" type="push" title="Pause All Tempi" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5pI-F3-NDu">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
                             <textField toolTip="Time elapsed" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yZZ-Ld-l8B">
-                                <rect key="frame" x="18" y="20" width="379" height="48"/>
+                                <rect key="frame" x="18" y="61" width="189" height="48"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="0h 0m" id="cqy-6S-IZd">
                                     <font key="font" size="40" name="SFMono-Regular"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <progressIndicator wantsLayer="YES" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" maxValue="100" displayedWhenStopped="NO" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="dcS-XN-mfJ">
+                                <rect key="frame" x="225" y="69" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="6KP-GK-S52"/>
+                                    <constraint firstAttribute="width" constant="32" id="hVj-Oc-uDR"/>
+                                </constraints>
+                            </progressIndicator>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RLY-QE-2bp">
+                                <rect key="frame" x="277" y="68" width="32" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="3r7-Zx-xoW"/>
+                                    <constraint firstAttribute="width" constant="32" id="hhk-bR-Bxl"/>
+                                </constraints>
+                                <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="eIb-bF-D6v">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="yZZ-Ld-l8B" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="7cN-00-JVc"/>
-                            <constraint firstItem="yZZ-Ld-l8B" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="EhU-5A-M4X"/>
-                            <constraint firstAttribute="trailing" secondItem="yZZ-Ld-l8B" secondAttribute="trailing" constant="20" id="Qhn-35-Hpn"/>
-                            <constraint firstAttribute="bottom" secondItem="yZZ-Ld-l8B" secondAttribute="bottom" constant="20" id="feB-vt-ATT"/>
+                            <constraint firstItem="yZZ-Ld-l8B" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="3NO-Zm-Vm5"/>
+                            <constraint firstItem="4VA-is-SPD" firstAttribute="top" secondItem="yZZ-Ld-l8B" secondAttribute="bottom" constant="20" id="4C3-96-GX5"/>
+                            <constraint firstItem="4VA-is-SPD" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="6Mh-1c-KtL"/>
+                            <constraint firstItem="yZZ-Ld-l8B" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="Fgj-Yn-fwc"/>
+                            <constraint firstItem="RLY-QE-2bp" firstAttribute="leading" secondItem="dcS-XN-mfJ" secondAttribute="trailing" constant="20" id="IWv-LF-68r"/>
+                            <constraint firstItem="dcS-XN-mfJ" firstAttribute="leading" secondItem="yZZ-Ld-l8B" secondAttribute="trailing" constant="20" id="Qfg-Rd-kAn"/>
+                            <constraint firstAttribute="trailing" secondItem="4VA-is-SPD" secondAttribute="trailing" constant="20" symbolic="YES" id="ar4-tv-1CW"/>
+                            <constraint firstItem="RLY-QE-2bp" firstAttribute="centerY" secondItem="dcS-XN-mfJ" secondAttribute="centerY" id="fZw-mt-eEi"/>
+                            <constraint firstAttribute="trailing" secondItem="RLY-QE-2bp" secondAttribute="trailing" constant="20" id="l7a-pK-VSx"/>
+                            <constraint firstAttribute="bottom" secondItem="4VA-is-SPD" secondAttribute="bottom" constant="20" symbolic="YES" id="luh-bB-18j"/>
+                            <constraint firstItem="dcS-XN-mfJ" firstAttribute="centerY" secondItem="yZZ-Ld-l8B" secondAttribute="centerY" id="opf-Th-3Vk"/>
                         </constraints>
                     </view>
                     <connections>
@@ -711,7 +743,10 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="74.5" y="146.5"/>
+            <point key="canvasLocation" x="31.5" y="184.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NSAddTemplate" width="11" height="11"/>
+    </resources>
 </document>

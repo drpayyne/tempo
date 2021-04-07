@@ -13,6 +13,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     var timer: Timer = Timer()
     var tempo: Int = 0
+    var inTempo: Bool = false
     var viewController: ViewController = ViewController()
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
@@ -34,11 +35,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         // Initialize timer
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCounter), userInfo: nil, repeats: true)
+        inTempo = true
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Kill timer
         timer.invalidate()
+        inTempo = false
     }
 
     @objc func showPopover() {
